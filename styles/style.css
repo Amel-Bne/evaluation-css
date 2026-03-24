@@ -4,8 +4,115 @@
 *::after {
   box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 /* Fait tenir les images dans leur parent et enlève l'espacement en bottom */
 img {
   display: block;
-  max-width:100%;
+  max-width: 100%;
+}
+
+header {
+  background-image: url(../img/bg_pattern.png);
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.logo {
+  width: 100px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.logo img{
+}
+
+/* ============================================================
+BURGER ICON - les 3 traits
+- display: none → caché par défaut sur desktop
+- flex-direction: column → traits empilés
+- gap → espace entre les traits
+============================================================ */
+.menu-icon {
+    display:flex;
+    flex-direction: column;
+    gap: 5px;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-top: 20px;
+    position: fixed;
+}
+
+/* ============================================================
+LES TRAITS DU BURGER
+- width, height → taille de chaque trait
+- background: white → couleur des traits
+- border-radius → coins légèrement arrondis
+============================================================ */
+.menu-icon div {
+    width: 23px;
+    height: 3px;
+    background: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+.wrapper:nth-child(-n+8){
+margin-top: 60px;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+}
+
+.wrapper h1{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: absolute;
+  color: white;
+}
+.wrapper img {
+  width: 100vh;
+  position: absolue;
+  margin: 0;
+}
+
+.wrapper a{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper h1{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.wrapper a:nth-child(n+9) {
+    display: grid;
+    grid-template-rows: repeat(1, 3fr);
+    width: 100%;
+
+}
+
+
+
+
+.collection {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 0;
+  margin: 0;
+}
+
+.footer{
+  background-image: url(../img/bg_pattern.png);
 }
